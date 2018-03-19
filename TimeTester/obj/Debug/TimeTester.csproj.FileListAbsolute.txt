@@ -1,7 +1,0 @@
-C:\Users\keaedwar\Documents\Visual Studio 2017\Projects\TimeTesterSolution\TimeTester\bin\Debug\TimeTester.exe.config
-C:\Users\keaedwar\Documents\Visual Studio 2017\Projects\TimeTesterSolution\TimeTester\bin\Debug\TimeTester.exe
-C:\Users\keaedwar\Documents\Visual Studio 2017\Projects\TimeTesterSolution\TimeTester\bin\Debug\TimeTester.pdb
-C:\Users\keaedwar\Documents\Visual Studio 2017\Projects\TimeTesterSolution\TimeTester\obj\Debug\TimeTester.csproj.CoreCompileInputs.cache
-C:\Users\keaedwar\Documents\Visual Studio 2017\Projects\TimeTesterSolution\TimeTester\obj\Debug\TimeTester.exe
-C:\Users\keaedwar\Documents\Visual Studio 2017\Projects\TimeTesterSolution\TimeTester\obj\Debug\TimeTester.pdb
-C:\Users\keaedwar\Documents\Visual Studio 2017\Projects\TimeTesterSolution\TimeTester\obj\Debug\TimeTester.csprojResolveAssemblyReference.cache

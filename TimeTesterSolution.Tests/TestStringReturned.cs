@@ -25,7 +25,7 @@ namespace TimeTesterSolution.Tests
         [InlineData("05:00:00", "NightTime")]
         [InlineData("06:00:00", "NightTime")]
         [InlineData("06:29:59", "NightTime")]
-        [InlineData("06:30:00", "NightTime")]
+        [InlineData("06:30:00", "NightTime")] // Should return DayTime?
         [InlineData("06:30:01", "DayTime")]
         [InlineData("07:00:00", "DayTime")]
         [InlineData("08:00:00", "DayTime")]
