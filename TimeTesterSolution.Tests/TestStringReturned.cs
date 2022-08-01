@@ -1,14 +1,12 @@
-﻿using System;
-using TimeTester;
-using Xunit;
+﻿using TimeTester;
 
 namespace TimeTesterSolution.Tests
 {
     [Trait("Test","")]
     public class TestStringReturned
     {
-        public const string DayTimeConnectionString = "DayTime";
-        public const string NightTimeConnectionString = "NightTime";
+        public readonly string DayTimeConnectionString = "DayTime";
+        public readonly string NightTimeConnectionString = "NightTime";
         public readonly TimeSpan NightTimeStart = TimeKeeper.ToTimeSpan("22:00:00");
         public readonly TimeSpan NightTimeEnd = TimeKeeper.ToTimeSpan("06:30:00");
 
@@ -45,6 +43,37 @@ namespace TimeTesterSolution.Tests
         public void StringReturnedMatchesExpected(string time, string expected)
         {
             // Arrange
+            var now = TimeKeeper.ToTimeSpan(time);
+            var csp = new ConnectionStringProvider(DayTimeConnectionString, NightTimeConnectionString, NightTimeStart,
+                NightTimeEnd, now);
+            // Act
+            var value = csp.GetConnectionString();
+            // Assert
+            Assert.Equal(value, expected);
+        }
+
+        [Fact]
+        [Trait("Category", "Unit Test")]
+        public void ThisTestShouldAlwaysFail()
+        {
+            var succeed = false;  // set to true to make this test succeed
+            var time = "06:30:00";
+            var expected = (succeed) ? "NightTime": "daytime";
+            var now = TimeKeeper.ToTimeSpan(time);
+            var csp = new ConnectionStringProvider(DayTimeConnectionString, NightTimeConnectionString, NightTimeStart,
+                NightTimeEnd, now);
+            // Act
+            var value = csp.GetConnectionString();
+            // Assert
+            Assert.Equal(value, expected);
+        }
+
+        [Fact]
+        [Trait("Category", "Unit Test")]
+        public void ThisTestShouldAlwaysSucceed()
+        {
+            var time = "06:30:00";
+            var expected = "NightTime";
             var now = TimeKeeper.ToTimeSpan(time);
             var csp = new ConnectionStringProvider(DayTimeConnectionString, NightTimeConnectionString, NightTimeStart,
                 NightTimeEnd, now);
